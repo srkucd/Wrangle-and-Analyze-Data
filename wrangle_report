@@ -1,0 +1,40 @@
+In this task, I am going to clean the data to build a database that meets 3rd normal form.
+So, I found the problem of original dataset below:
+
+8 quality issues:
+
+WeRateDogs
+1: filter all non-null value of retweet status id and retweet to id
+-use dataframe filter to remove the rows does not meet the requirement
+
+2: clean numerator and denominator number
+-Due to some of numerator/denominator number are not accuracy, I found that we can use find function, and extract the left side of 
+foreslash as numerator, and use right side of foreslash as denominator. It will solve most of the problems, however, there are still few rows with the problem cannot be solved, after scanning the dataset, I found there are only 2 rows does not fit the solution. Hence, I extract the twitter text to manually fill the numerator and denominator value.
+
+3: Change datatype of df_WeRateDogs
+-create a dictionary with correct format type, and use astype function to change the datatype of the dataset.
+
+4: We found that there is 0 in rating denominator, which cause divide 0 error.
+-use dataframe filter to remove the rows that demoninator is 0.
+
+5: Remove the columns that does not use in the case.
+-create a sub-dataset as the final version of dataset.
+
+imagePrediction:
+6: Tweet id should be string instead of integer
+-create a dictionary with correct format type, and use astype function to change the datatype of the dataset.
+
+7: Remove duplicate url
+-Use drop_duplicate function to remove duplicate url
+
+Tweepy:
+8: Convert JSON to dataframe, and remove irrelevant columns
+-Firstly, convert txt file to json, iterate whole json file to extract the column we need and save it into a list. Then, we create a dictionary to store the data export from json. Finally, we convert dictionary to dataframe.
+
+2 tidleness issues:
+WeRateDogs
+Combine dog type columns(Tidleness issue)
+-After read some twitters, we found that dog types are from twitter text's key word. So, we use find function to analyse string, if there is a keyword in such string, we append the keyword to list, and use the new created list to create a row called rating.
+
+Combine numerator and denominator as rating(Tidleness issue)
+-After deal with problems in denominator and numerator, use denominator divide numerator.
