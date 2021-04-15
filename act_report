@@ -1,7 +1,0 @@
--From pie chart, we know that most of dog are pupper, and then doggo, the least of dogs are floofer.
-
--Most of dog rating are approximately 1 and 1.5, there are some extremely high value in rating, but from project motivation I think these data are reasonable.
-
--According to the bar chart of different algorithm, we found that all three algorithms's efficiency are almost same, which means it is very difficult to find the difference from data visualisation.
-
--From retweet count and favourite count, we know that retweet count is less than favourite, and they have a lot of rows in common(e.g., row 1037 is the most retweet tweet, and it also occurs in favourite top 10.)
